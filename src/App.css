@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:wght@700&family=Roboto:wght@100;300&display=swap");
+
+:root {
+  --primary-color: rgb(255, 198, 41);
+  --secondary-color: rgb(125, 165, 37);
+  --primary-navbar-color: rgb(255, 249, 234);
+  --secondary-navbar-color: hsl(79, 53%, 88%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fcfcfc !important;
+  line-height: 1.4;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-size: 2rem;
+  font-family: "Lato", sans-serif;
+}
+
+p {
+  color: #555;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin: 2rem 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-one {
+  border: 1px solid var(--primary-color) !important;
+  color: var(--primary-color) !important;
+  transition: 0.3s ease-out !important;
+}

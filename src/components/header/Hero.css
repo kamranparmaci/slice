@@ -1,0 +1,29 @@
+.hero {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.hero .hero-header {
+  font-size: 3rem;
+  color: var(--primary-color);
+}
+
+.hero a:hover {
+  transform: scale(1.01);
+  color: #fff;
+}
+
+@media only screen and (max-width: 767px) {
+  .hero .hero-header {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+  .hero .hero-header {
+    font-size: 1.75rem;
+  }
+}

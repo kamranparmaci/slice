@@ -1,0 +1,41 @@
+.search-input {
+  background-color: transparent;
+  border: none;
+  margin-left: 2rem;
+  outline: none;
+}
+
+.search-input:focus {
+  animation: animeSearch 0.5s linear forwards;
+}
+
+@keyframes animeSearch {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+
+  100% {
+    background-color: white;
+    padding: 0.75rem 0;
+    width: 400px;
+    opacity: 1;
+    border: 2px solid var(--secondary-color);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .search-input {
+    margin: 0;
+  }
+
+  @keyframes animeSearch {
+    100% {
+      background-color: white;
+      padding: 0.5rem 0;
+      width: 190px;
+      opacity: 1;
+      border: 2px solid var(--secondary-color);
+    }
+  }
+}

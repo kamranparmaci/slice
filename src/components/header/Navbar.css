@@ -1,0 +1,73 @@
+.navbar {
+  font-family: "Berkshire Swash", sans-serif;
+  background-image: linear-gradient(
+    to right,
+    var(--primary-navbar-color),
+    var(--secondary-navbar-color)
+  );
+}
+
+a.navbar-brand {
+  font-size: 2.5rem;
+  font-family: "Berkshire Swash", sans-serif;
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+a.navbar-brand:hover {
+  color: var(--secondary-color);
+}
+
+.navbar i {
+  color: var(--primary-color);
+}
+
+ul li a {
+  position: relative;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: 0.3s ease-out;
+  cursor: pointer;
+}
+
+ul li a:hover {
+  transform: scale(1.03);
+  color: var(--primary-color);
+}
+
+ul li a:after,
+ul li a:before {
+  content: "";
+  display: block;
+  background: var(--primary-color);
+  height: 2px;
+  width: 0;
+  transition: all 0.3s linear;
+}
+
+ul li a:after {
+  position: absolute;
+  right: 0;
+}
+
+ul li a:hover:before,
+ul li a:hover:after {
+  width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+  a.navbar-brand {
+    font-size: 1.1rem;
+  }
+
+  ul li a {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  ul li a {
+    font-size: 1.25rem;
+  }
+}

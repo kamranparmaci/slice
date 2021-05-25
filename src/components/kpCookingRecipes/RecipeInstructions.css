@@ -1,0 +1,47 @@
+.ingredient-container,
+.equipments-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1rem;
+  width: 50%;
+  padding: 2rem;
+}
+
+.ingredient-title {
+  display: inline;
+}
+
+.serving {
+  font-size: 1rem;
+  margin-left: 2rem;
+  padding: 0.5rem;
+  background-color: var(--secondary-navbar-color);
+  border-radius: 10%;
+}
+
+img {
+  margin: 0 auto;
+  display: block;
+}
+
+.summary,
+.instructions {
+  display: block;
+  background-color: var(--secondary-navbar-color);
+  margin: 0 auto;
+  padding: 2rem;
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .ingredient-container,
+  .equipments-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.5rem;
+    padding: 2rem 0 0.5rem;
+  }
+
+  img {
+    width: 100%;
+  }
+}
