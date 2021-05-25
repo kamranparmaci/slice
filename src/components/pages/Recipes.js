@@ -10,7 +10,7 @@ const Recipes = () => {
 
   useEffect(() => {
     getData(valueId);
-  }, []);
+  });
 
   return (
     <div className="higher-container">
