@@ -4,7 +4,7 @@ import axios from "axios";
 const useRecipesAnalizes = () => {
   const [recipeAnalizes, setRecipeAnalizes] = useState([]);
 
-  const API_KEY = "e67d535eb95c4b458c8a6f7f348ebec4";
+  const API_KEY = "8dc8773d1eab476ab6308ded74d498d2";
 
   const getRecipes = async (id) => {
     const recipe = await axios.get(

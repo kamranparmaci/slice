@@ -1,3 +1,4 @@
+// import react, { Component } from "react";
 import { useContext, useEffect } from "react";
 import { SearchResults } from "../../providers/SearchResults";
 import Ingredients from "./Ingredients";
@@ -5,6 +6,12 @@ import Equipments from "./Equipments";
 import "./RecipeInstructions.css";
 import uuid from "react-uuid";
 import { useParams } from "react-router";
+
+// class RecipeInstructions extends Component({ rcipeAnalize, match }) {
+//   render() {
+//     return <div>helllooooooooo</div>;
+//   }
+// }
 
 const RecipeInstructions = (recipeAnalize) => {
   const { cardId } = useParams();
@@ -26,7 +33,13 @@ const RecipeInstructions = (recipeAnalize) => {
     getRecipes(cardId);
     getIngredients(cardId);
     getEquipments(cardId);
-  }, []);
+
+    return () => {
+      getRecipes(cardId);
+      getIngredients(cardId);
+      getEquipments(cardId);
+    };
+  });
 
   return (
     <div className="py-5">

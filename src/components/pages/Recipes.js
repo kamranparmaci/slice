@@ -10,7 +10,11 @@ const Recipes = () => {
 
   useEffect(() => {
     getData(valueId);
-  }, []);
+
+    return () => {
+      getData(valueId);
+    };
+  });
 
   return (
     <div className="higher-container">
