@@ -26,7 +26,7 @@ const RecipeInstructions = (recipeAnalize) => {
     getRecipes(cardId);
     getIngredients(cardId);
     getEquipments(cardId);
-  });
+  }, []);
 
   return (
     <div className="py-5">

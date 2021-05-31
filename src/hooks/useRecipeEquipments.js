@@ -4,7 +4,7 @@ import { useState } from "react";
 const useRecipeEquipments = () => {
   const [equipments, setEquipments] = useState([]);
 
-  const API_KEY = "6354f288edd64c04baed9962c2643c24";
+  const API_KEY = "e67d535eb95c4b458c8a6f7f348ebec4";
 
   const getEquipments = async (id) => {
     const equipments = await axios.get(
