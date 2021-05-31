@@ -1,18 +1,52 @@
-import { useContext, useEffect } from "react";
-import { SearchResults } from "../../providers/SearchResults";
+import { useEffect, useState } from "react";
 import Ingredients from "./Ingredients";
 import Equipments from "./Equipments";
 import "./RecipeInstructions.css";
 import uuid from "react-uuid";
 import { useParams } from "react-router";
+import recipe from "../../api/recipe";
 
-const RecipeInstructions = (recipeAnalize) => {
+const RecipeInstructions = () => {
+  const [informations, setRecipeAnalizes] = useState([]);
+  const [equipments, setEquipments] = useState([]);
+  const [ingredients, setIngredients] = useState([]);
+
   const { cardId } = useParams();
 
-  const { image, title, summary, instructions, servings } = recipeAnalize;
+  useEffect(() => {
+    getRecipes(cardId);
+    getIngredients(cardId);
+    getEquipments(cardId);
+  }, [cardId]);
 
-  const { ingredients, equipments, getRecipes, getIngredients, getEquipments } =
-    useContext(SearchResults);
+  const getRecipes = async (cardId) => {
+    const informations = await recipe.get(`${cardId}/information`, {
+      params: {
+        id: cardId,
+      },
+    });
+    setRecipeAnalizes(informations.data);
+  };
+
+  const getIngredients = async (cardId) => {
+    const ingredients = await recipe.get(`${cardId}/ingredientWidget.json`, {
+      params: {
+        id: cardId,
+      },
+    });
+    setIngredients(ingredients.data.ingredients);
+  };
+
+  const getEquipments = async (cardId) => {
+    const equipments = await recipe.get(`${cardId}/equipmentWidget.json`, {
+      params: {
+        id: cardId,
+      },
+    });
+    setEquipments(equipments.data.equipment);
+  };
+
+  const { image, title, summary, instructions, servings } = informations;
 
   const renderedIngredients = ingredients.map((ingredient) => {
     return <Ingredients key={uuid()} ingredient={ingredient} />;
@@ -21,12 +55,6 @@ const RecipeInstructions = (recipeAnalize) => {
   const renderedEquipments = equipments.map((equipment) => {
     return <Equipments key={uuid()} equipment={equipment} />;
   });
-
-  useEffect(() => {
-    getRecipes(cardId);
-    getIngredients(cardId);
-    getEquipments(cardId);
-  }, []);
 
   return (
     <div className="py-5">
