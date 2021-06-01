@@ -46,7 +46,7 @@ const GoogleAuth = () => {
         >
           <img
             alt="Google Icon"
-            className="w-25 h-25 pt-1 pr-1"
+            className="pt-1 pr-1"
             src="https://img.icons8.com/carbon-copy/20/000000/google-logo.png"
           />{" "}
           Sign Out
@@ -61,7 +61,7 @@ const GoogleAuth = () => {
         >
           <img
             alt="Google Icon"
-            className="w-25 h-25 pt-1 pr-1"
+            className="pt-1 pr-1"
             src="https://img.icons8.com/carbon-copy/20/000000/google-logo.png"
           />{" "}
           Sign In with Google

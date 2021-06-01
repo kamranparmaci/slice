@@ -12,6 +12,11 @@ const Navbar = () => {
 
   let history = useHistory();
 
+  // const onSubmit = (e) => {
+  //   e.preventDefault();
+  //   history.push(`${search}}`);
+  // };
+
   return (
     <>
       <nav className="navbar navbar-expand-lg py-2">
@@ -19,7 +24,7 @@ const Navbar = () => {
           <Link to="/" className="navbar-brand">
             KPCooking
           </Link>
-          <div onSubmit={() => history.push(`/${search}`)}>
+          <div onSubmit={() => history.push(`${search}}`)}>
             <Search
               type="text"
               className="anime search-input"
@@ -47,9 +52,9 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#home">
+                <Link className="nav-link" to="/">
                   <GoogleAuth />
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
