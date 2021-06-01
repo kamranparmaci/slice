@@ -4,7 +4,7 @@ import Equipments from "./Equipments";
 import "./RecipeInstructions.css";
 import uuid from "react-uuid";
 import { useParams } from "react-router";
-import recipe from "../../api/recipe";
+import spoon from "../../api/spoon";
 
 const RecipeInstructions = () => {
   const [informations, setRecipeAnalizes] = useState([]);
@@ -20,7 +20,7 @@ const RecipeInstructions = () => {
   }, [cardId]);
 
   const getRecipes = async (cardId) => {
-    const informations = await recipe.get(`${cardId}/information`, {
+    const informations = await spoon.get(`${cardId}/information`, {
       params: {
         id: cardId,
       },
@@ -29,7 +29,7 @@ const RecipeInstructions = () => {
   };
 
   const getIngredients = async (cardId) => {
-    const ingredients = await recipe.get(`${cardId}/ingredientWidget.json`, {
+    const ingredients = await spoon.get(`${cardId}/ingredientWidget.json`, {
       params: {
         id: cardId,
       },
@@ -38,7 +38,7 @@ const RecipeInstructions = () => {
   };
 
   const getEquipments = async (cardId) => {
-    const equipments = await recipe.get(`${cardId}/equipmentWidget.json`, {
+    const equipments = await spoon.get(`${cardId}/equipmentWidget.json`, {
       params: {
         id: cardId,
       },

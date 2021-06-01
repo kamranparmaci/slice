@@ -12,10 +12,10 @@ const Navbar = () => {
 
   let history = useHistory();
 
-  // const onSubmit = (e) => {
-  //   e.preventDefault();
-  //   history.push(`${search}}`);
-  // };
+  const onSubmit = (e) => {
+    e.preventDefault();
+    history.push(`/${search}`);
+  };
 
   return (
     <>
@@ -24,7 +24,7 @@ const Navbar = () => {
           <Link to="/" className="navbar-brand">
             KPCooking
           </Link>
-          <div onSubmit={() => history.push(`${search}}`)}>
+          <div onSubmit={onSubmit}>
             <Search
               type="text"
               className="anime search-input"
