@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Ingredients from "./Ingredients";
-import Equipments from "./Equipments";
+import Ingredients from "./Ingredients.component";
+import Equipments from "./Equipments.component";
 import "./RecipeInstructions.css";
 import uuid from "react-uuid";
 import { useParams } from "react-router";

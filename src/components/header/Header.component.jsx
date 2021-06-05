@@ -1,4 +1,4 @@
-import Hero from "./Hero";
+import Hero from "./Hero.component";
 import "./Header.css";
 
 const Header = () => {

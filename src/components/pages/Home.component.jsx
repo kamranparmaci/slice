@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { RecipesContext } from "../../providers/SearchResults";
-import Header from "../header/Header";
-import NewRecipesContent from "../searchRecipes/NewRecipesContent";
-import SearchRecipes from "../searchRecipes/SearchRecipes";
+import Header from "../header/Header.component";
+import NewRecipesContent from "../searchRecipes/NewRecipesContent.component";
+import SearchRecipes from "../searchRecipes/SearchRecipes.component";
 import "./Home.css";
 
 const Home = () => {

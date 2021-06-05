@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { RecipesContext } from "../../providers/SearchResults";
-import NewRecipesContent from "./NewRecipesContent";
+import NewRecipesContent from "./NewRecipesContent.component";
 
 const SearchRecipes = () => {
   const newResults = useContext(RecipesContext);

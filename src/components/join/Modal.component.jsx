@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import GoogleAuth from "./GoogleAuth";
-import SignIn from "./SignIn";
+import GoogleAuth from "./GoogleAuth.component";
+import SignIn from "./SignIn.component";
 import "./Modal.css";
 
 const Modal = () => {

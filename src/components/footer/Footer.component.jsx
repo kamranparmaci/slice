@@ -1,3 +1,4 @@
+import CustomInput from "../custom-input/CustomInput.component";
 import "./Footer.css";
 
 const Footer = () => {
@@ -9,12 +10,12 @@ const Footer = () => {
             KPCooking
           </h1>
           <div className="row">
-            <div className="col-6-md mb-4 w-50">
+            <div className="col-6-md mb-4">
               <h6>ABOUT US</h6>
               <span>
                 <b>Address: </b>
               </span>
-              <div className="text-muted">
+              <div className="text-muted w-50">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta,
                 nam.
               </div>
@@ -26,8 +27,8 @@ const Footer = () => {
             <div className="col-6-md">
               <form>
                 <h6>GET FRESH NEWS FROM KPCooking</h6>
-                <input type="text" placeholder="Enter Email" />
-                <input type="button" value="Subscribe" />
+                <CustomInput type="text" placeholder="Enter Email" />
+                <CustomInput type="button" value="Subscribe" />
               </form>
             </div>
           </div>

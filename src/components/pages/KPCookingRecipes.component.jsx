@@ -1,4 +1,4 @@
-import RecipeAnalizeInstructionsContent from "../kpCookingRecipes/RecipeAnalizeInstructionsContent";
+import RecipeAnalizeInstructionsContent from "../kpCookingRecipes/RecipeAnalizeInstructionsContent.component";
 
 const KPCookingRecipes = () => {
   return (

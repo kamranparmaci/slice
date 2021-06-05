@@ -1,4 +1,4 @@
-import RecipeInstructions from "./RecipeInstructions";
+import RecipeInstructions from "./RecipeInstructions.component";
 
 const RecipeAnalizeInstructionsContent = () => {
   return (

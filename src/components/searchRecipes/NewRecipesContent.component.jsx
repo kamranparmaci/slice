@@ -1,4 +1,4 @@
-import CardRecipes from "./CardRecipes";
+import CardRecipes from "./CardRecipes.component";
 
 const NewRecipesContent = ({ newResults }) => {
   const renderedResults = newResults.map((result) => {

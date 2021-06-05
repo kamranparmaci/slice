@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import spoon from "../../api/spoon";
-import Spinner from "../Spinner";
-import CardRecipes from "./CardRecipes";
+import Spinner from "../spinner/Spinner.component";
+import CardRecipes from "./CardRecipes.component";
 import "./RecipesContent.css";
 
 const RecipesContent = () => {

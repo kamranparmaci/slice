@@ -1,6 +1,6 @@
 import "./Hero.css";
 
-import Modal from "../join/Modal";
+import Modal from "../join/Modal.component";
 
 const Hero = () => {
   return (

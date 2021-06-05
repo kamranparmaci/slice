@@ -1,4 +1,4 @@
-import CardArticle from "./CardArticle";
+import CardArticle from "./CardArticle.component";
 
 const ArticlesContent = () => {
   return (

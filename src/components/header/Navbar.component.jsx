@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { SearchResults } from "../../providers/SearchResults";
-import Search from "../Search";
+import CustomInput from "../custom-input/CustomInput.component";
 import "./Navbar.css";
-import GoogleAuth from "../join/GoogleAuth";
-import Modal from "../join/Modal";
+import GoogleAuth from "../join/GoogleAuth.component";
+import Modal from "../join/Modal.component";
 import { ReactComponent as ArticleLogo } from "../../assets/article.svg";
 
 const Navbar = () => {
@@ -25,7 +25,7 @@ const Navbar = () => {
             KPCooking
           </Link>
           <div onSubmit={onSubmit}>
-            <Search
+            <CustomInput
               type="text"
               className="anime search-input"
               placeholder="Search a Food"
